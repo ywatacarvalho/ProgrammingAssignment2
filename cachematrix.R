@@ -47,7 +47,11 @@ a <- matrix(c(10, 0, 0, 0, 20, 0, 0, 0, 30), nrow = 3, ncol = 3)
 m <- makeCacheMatrix(a)
 m$get()
 
+## The first call to the function will actually execute the matrix inversion and save the result into the cache
+
 cacheSolve(m)
+
+## the second call will just retrieve the inverse matrix from the cache and return it
 
 cacheSolve(m)
 
